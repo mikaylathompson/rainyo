@@ -12,7 +12,6 @@ def index():
 
 @app.route('/madison', methods = ['POST'])
 def rainyomadison():
-    return "Ok, something: " + request.data
     try:
         x = json.loads(request.data)
         try:
