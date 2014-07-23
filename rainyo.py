@@ -1,41 +1,36 @@
 import os
 import requests
 import json
-from flask import Flask
-from flask import request
-from flask import render_template
 import random
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
+if __name__ == "__main__":
+    app.run()
 
 @app.route('/')
-def index():
+def index():                # index redirects to madison page
     return visit_madison()
+
+@app.route('/madison')
+def visit_madison():
+    #pick a random image for the background
+    imgs = ['hay_bales', 'dark_window', 'city_window']
+    img = imgs[random.randint(0,2)] + "_sm.jpg"
+    #render the page
+    return render_template('madison.html', img = img)
+
 
 @app.route('/madison', methods = ['POST'])
 def rainyomadison():
     x = json.loads(request.data)
+    with open('yo_api.json', 'r') as f:
+        data = json.load(f)
     if x["raining"] == "true":
-        r = requests.post("http://api.justyo.co/yoall/", data={'api_token': '3e795a3c-e627-1eef-41bb-cd7b0aee5f79'})
-        return "Yodeled.  Or at least you tried to."
+        r = requests.post("http://api.justyo.co/yoall/", data=data)
+        return "Yodeled.  Or at least tried to."
     elif x["raining"] == "false":
-        return "It's not raining, so I'm not going to yo."
+        return "It's not raining, so no yo."
     else:
-        return "Something's not right."
+        return "Something's went wrong."
                 
-                
-
-@app.route('/madison')
-def visit_madison():
-    imgs = ['hay_bales', 'dark_window', 'city_window']
-    img = imgs[random.randint(0,2)] + "_sm.jpg"
-    return render_template('madison.html', img = img)
-    return "Yo, want to know when it's raining in Madison?  Send a yo to MadisonRainYo."
-
-
-if __name__ == "__main__":
-    app.run(debug=true)
-
-
-
-

@@ -2,3 +2,4 @@ bin/*
 lib/*
 local/*
 *.pyc
+yo_api.json
