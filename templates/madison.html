@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <div class="bg" style="background-image: url({{ url_for('static', filename=img) }})">
+    <div class="bg">
+        <img src="url({{ url_for('static', filename=img) }})" alt="">
         <div class="textbox">
             Want to know if it's raining in Madison?<br>
             Send a <span class="yo">yo</span> to <span class="mry">MadisonRainYo</span>.
