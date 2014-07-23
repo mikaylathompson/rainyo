@@ -30,8 +30,13 @@ body {
 #textbox {
     position: relative;
     left: -50%;
+    top: 150px;
+    
+    line-height: 2;
+    
     background: #aaaaaa;
     background: rgba(255,255,255, .5);
-     border: solid #cccccc 2px ;
-    border: solid rgba(255,255,255, .2) 2px ;
+    padding: 25px;
+    border: solid #cccccc 15px ;
+    border: solid rgba(255,255,255, .2) 15px ;
 }
