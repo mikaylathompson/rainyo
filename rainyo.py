@@ -11,7 +11,8 @@ def index():
 
 
 
-@app.route('/madison', methods = ['POST'])
+#@app.route('/madison', methods = ['POST'])
+@app.route('/madison')
 def rainyomadison():
     
     r = requests.post("http://api.justyo.co/yoall/", data={'api_token': '3e795a3c-e627-1eef-41bb-cd7b0aee5f79'})
