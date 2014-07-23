@@ -20,7 +20,8 @@ def rainyomadison():
     if 'result' in r.json() and r.json()['result'] == 'OK':
         return json.dumps({'text': 'Notified Madisonians of rain'})
     else:
-        return json.dumps({'text': 'Error sending Yo.  Everyone\'s going to get wet now...'})
+        #return json.dumps({'text': 'Error sending Yo.  Everyone\'s going to get wet now...'})
+	return r.json()
     
 
 
