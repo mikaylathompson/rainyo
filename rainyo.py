@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Want to know when it's raining in Madison?  Send a yo to MadisonRainYo"
+    return visit_madison()
 
 @app.route('/madison', methods = ['POST'])
 def rainyomadison():
