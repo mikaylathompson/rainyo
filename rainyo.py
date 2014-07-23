@@ -19,7 +19,7 @@ yo_button = """<head><title>Madison RainYo</title></head>
     <script type="text/javascript">
     	var _yoData = {
 	    	"username": "MADISONRAINYO",
-	    	"trigger": "When it's raining in Madison"
+	    	"trigger": "it's raining in Madison"
 	    };
 	    var s = document.createElement("script");
 	    s.type = "text/javascript";
