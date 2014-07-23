@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 2em;
+    font-size: 2.5em;
     background-color: #000;
     text-align: center;
 }
@@ -33,10 +33,16 @@ body {
     top: 150px;
     
     line-height: 2;
+    font-weight: 700;
     
     background: #aaaaaa;
     background: rgba(255,255,255, .5);
     padding: 30px;
     border: solid #cccccc 15px ;
     border: solid rgba(255,255,255, .2) 15px ;
+}
+
+.yo, .mry {
+    font-weight: 900;
+    font-style: italic;
 }
