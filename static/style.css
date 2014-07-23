@@ -5,14 +5,14 @@ body {
     text-align: center;
 }
 
-.bg {
+#bg {
   position: fixed; 
   top: -50%; 
   left: -50%; 
   width: 200%; 
   height: 200%;
 }
-.bg img {
+#bg img {
   position: absolute; 
   top: 0; 
   left: 0; 
@@ -23,7 +23,15 @@ body {
   height: 50%;
 }
 
-.textbox {
-    z-index: 100;
-
+#behindtext {
+    position: absolute;
+    left: 50%;
+}
+#textbox {
+    position: relative;
+    left: -50%;
+    background: #aaaaaa;
+    background: rgba(255,255,255, .5);
+     border: solid #cccccc 2px ;
+    border: solid rgba(255,255,255, .2) 2px ;
 }
