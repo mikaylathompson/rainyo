@@ -19,6 +19,6 @@ body {
   right: 0; 
   bottom: 0; 
   margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
+  width: 50%;
+  height: 50%;
 }
