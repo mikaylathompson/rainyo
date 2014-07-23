@@ -3,6 +3,7 @@ import requests
 import json
 from flask import Flask
 from flask import request
+from flask import render_template
 import random
 
 app = Flask(__name__)
