@@ -29,7 +29,6 @@ def rainyomadison():
 def visit_madison():
     imgs = ['hay_bales', 'dark_window', 'city_window']
     img = imgs[random.randint(0,2)] + ".JPG"
-    return img
     return render_template('madison.html', img = img)
     return "Yo, want to know when it's raining in Madison?  Send a yo to MadisonRainYo."
 
