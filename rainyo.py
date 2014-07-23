@@ -21,7 +21,7 @@ def rainyomadison():
         return json.dumps({'text': 'Notified Madisonians of rain'})
     else:
         #return json.dumps({'text': 'Error sending Yo.  Everyone\'s going to get wet now...'})
-	return r.json()
+	    return "Erorr sending yo" + r.json()
     
 
 
