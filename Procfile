@@ -1,0 +1,1 @@
+web: gunicorn rainyo:app --log-file=-
